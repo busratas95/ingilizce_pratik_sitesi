@@ -1,0 +1,199 @@
+<html>
+<head>
+<title>INGILIZCE PRATIK SITESI</title>
+
+<link rel="stylesheet" href="bootstrap.min.css">
+
+
+<style>
+
+    .nav {
+        font-weight: bold;
+        position: absolute;
+        left: 350px;
+        top: 60px;
+    }
+
+    .card-header {
+        height: 100px;
+    }
+
+    .list-group {
+        width: 342px;
+        position: absolute;
+        left: 0;
+        top: 150px;
+    }
+
+    .girisuyelikgenel {
+        position: absolute;
+        left: 450px;
+        top: 150px;
+    }
+
+    .badge {
+
+        width: 150px;
+        height: 36px;
+        font-size: 130%;
+        font-family: "Times New Roman";
+    }
+
+    .girisuyelik {
+        position: absolute;
+        top: 80px;
+        width: 180%;
+    }
+
+    #uyelikformu {
+        position: absolute;
+        left: 400px;
+        top: 0px;
+        width: 180%;
+    }
+
+
+
+</style>
+
+</head>
+
+<body>
+
+
+<div class="card text-center">                                                                      <!-- navbar anasayfa profil vs -->
+    <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+
+            <li class="nav-item">
+                <a class="nav-link active" href="#">ANASAYFA</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">PROFIL</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">PRATIK</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<br>
+
+<div>
+    <div class="list-group">                                                                        <!-- soldaki list group -->
+        <a href="#" class="list-group-item list-group-item-action">INGILIZCE ZAMANLAR</a>
+        <a href="#" class="list-group-item list-group-item-action">INGILIZCE DILBILGISI</a>
+        <a href="#" class="list-group-item list-group-item-action">INGILIZCE KELIMELER</a>
+        <a href="#" class="list-group-item list-group-item-action">GUNLUK INGILIZCE</a>
+        <a href="#" class="list-group-item list-group-item-action disabled">INGILIZCE FIILLER</a>
+    </div>
+
+
+    <div class="girisuyelikgenel">                                                                          <!-- giris yapma divi -->
+        <div>
+            <form>
+                <span class="badge badge-success">GIRIS YAP</span>
+                <div class="girisuyelik">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary" id="grsblg">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <div>
+            <form id="uyelikformu">
+                <span class="badge badge-danger">UYE OL</span>
+                <div class="girisuyelik">
+                <form class="needs-validation" novalidate>
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom01">First name</label>
+                            <input type="text" class="form-control" id="validationCustom01" placeholder="First name" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom02">Last name</label>
+                            <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-8 mb-3">
+                            <label for="validationCustom03">Email address</label>
+                            <input type="text" class="form-control" id="validationCustom03" placeholder="Email" required>
+                            <div class="valid-feedback">
+                                Please provide a valid city.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-8 mb-3">
+                            <label for="inputPassword5">New Password</label>
+                            <input type="password" class="form-control" id="inputPassword5" aria-describedby="passwordHelpBlock" placeholder="Password">
+                            <div class="valid-feedback">
+                                Please provide a valid state.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col-md-8 mb-3">
+                            <label for="inputPassword5">Confirm New Password</label>
+                            <input type="password" class="form-control" aria-describedby="passwordHelpBlock" placeholder="Password">
+                            <div class="invalid-feedback">
+                                Please provide a valid state.
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                </form>
+
+<!--                <script>
+                    // Example starter JavaScript for disabling form submissions if there are invalid fields
+                    (function() {
+                        'use strict';
+                        window.addEventListener('load', function() {
+                            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                            var forms = document.getElementsByClassName('needs-validation');
+                            // Loop over them and prevent submission
+                            var validation = Array.prototype.filter.call(forms, function(form) {
+                                form.addEventListener('submit', function(event) {
+                                    if (form.checkValidity() === false) {
+                                        event.preventDefault();
+                                        event.stopPropagation();
+                                    }
+                                    form.classList.add('was-validated');
+                                }, false);
+                            });
+                        }, false);
+                    })();
+                </script>-->
+                </div>
+                </form>
+        </div>
+
+
+    </div>
+</div>
+
+
+</body>
+</html>
