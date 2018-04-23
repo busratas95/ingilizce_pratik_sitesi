@@ -26,6 +26,13 @@
             top: 150px;
         }
 
+        .genelbilgiler {
+            position: absolute;
+            left: 460px;
+            top: 150px;
+            width: 800px;
+        }
+
     </style>
 
 
@@ -43,7 +50,7 @@
                 <a class="nav-link active" href="#">PROFIL</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#">PRATIK</a>
+                <a class="nav-link" href="#">PRATIK</a>
             </li>
         </ul>
     </div>
@@ -53,22 +60,80 @@
 
 <div>
     <div class="list-group">                                                                        <!-- soldaki list group -->
-        <a href="#" class="list-group-item list-group-item-action">INGILIZCE ZAMANLAR</a>
-        <a href="#" class="list-group-item list-group-item-action">INGILIZCE DILBILGISI</a>
-        <a href="#" class="list-group-item list-group-item-action">INGILIZCE KELIMELER</a>
-        <a href="#" class="list-group-item list-group-item-action">GUNLUK INGILIZCE</a>
-        <a href="#" class="list-group-item list-group-item-action disabled">INGILIZCE FIILLER</a>
+        <a href="#" class="list-group-item list-group-item-action active">GENEL BILGILER</a>
+        <a href="#" class="list-group-item list-group-item-action">YAPILAN TESTLER</a>
     </div>
 </div>
 
+<div class="genelbilgiler">                                                                          <!-- giris yapma divi -->
+
+    <div>
+        <form>
+            <span class="badge badge-danger">Üye Bilgileri</span>
+            <div>
+                <form class="needs-validation" novalidate>
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom01">First name</label>
+                            <input type="text" class="form-control" id="validationCustom01" placeholder="First name" disabled>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom02">Last name</label>
+                            <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" disabled>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-8 mb-3">
+                            <label for="validationCustom03">Email address</label>
+                            <input type="text" class="form-control" id="validationCustom03" placeholder="Email" disabled>
+                            <div class="valid-feedback">
+                                Please provide a valid city.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-8 mb-3">
+                            <label for="inputPassword5">Current Password</label>
+                            <input type="password" class="form-control" id="inputPassword" aria-describedby="passwordHelpBlock" placeholder="Password">
+                            <div class="valid-feedback">
+                                Please provide a valid state.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-8 mb-3">
+                            <label for="inputPassword5">New Password</label>
+                            <input type="password" class="form-control" id="inputPassword5" aria-describedby="passwordHelpBlock" placeholder="Password">
+                            <div class="valid-feedback">
+                                Please provide a valid state.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col-md-8 mb-3">
+                            <label for="inputPassword5">Confirm New Password</label>
+                            <input type="password" class="form-control" aria-describedby="passwordHelpBlock" placeholder="Password">
+                            <div class="invalid-feedback">
+                                Please provide a valid state.
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" type="submit">Change Password</button>
+                </form>
+            </div>
+        </form>
+    </div>
 
 
-
-
-
-
-<!-- BURAYA PROFIL BILGILERI GELECEK -->
-
+</div>
 
 
 

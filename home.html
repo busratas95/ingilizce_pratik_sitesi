@@ -1,6 +1,7 @@
 <html>
 <head>
 <title>INGILIZCE PRATIK SITESI</title>
+    <meta charset="utf8">
 
 <link rel="stylesheet" href="bootstrap.min.css">
 
@@ -32,11 +33,11 @@
     }
 
     .badge {
-
         width: 150px;
         height: 36px;
-        font-size: 130%;
-        font-family: "Times New Roman";
+        display:table-cell;
+        vertical-align: middle;
+        font-size: large;
     }
 
     .girisuyelik {
@@ -69,10 +70,10 @@
                 <a class="nav-link active" href="#">ANASAYFA</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">PROFIL</a>
+                <a class="nav-link">PROFIL</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#">PRATIK</a>
+                <a class="nav-link">PRATIK</a>
             </li>
         </ul>
     </div>
@@ -93,7 +94,7 @@
     <div class="girisuyelikgenel">                                                                          <!-- giris yapma divi -->
         <div>
             <form>
-                <span class="badge badge-success">GIRIS YAP</span>
+                <span class="badge badge-success">Giriş Yap</span>
                 <div class="girisuyelik">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email address</label>
@@ -114,21 +115,20 @@
         </div>
 
         <div>
-            <form id="uyelikformu">
-                <span class="badge badge-danger">UYE OL</span>
                 <div class="girisuyelik">
-                <form class="needs-validation" novalidate>
+                <form class="needs-validation" id="uyelikformu" method="post" action="register.php" novalidate>
+                    <span class="badge badge-danger">Üye Ol</span>
                     <div class="form-row">
                         <div class="col-md-4 mb-3">
                             <label for="validationCustom01">First name</label>
-                            <input type="text" class="form-control" id="validationCustom01" placeholder="First name" required>
+                            <input type="text" class="form-control" id="validationCustom01" name="firstname" placeholder="First name" required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
                             <label for="validationCustom02">Last name</label>
-                            <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" required>
+                            <input type="text" class="form-control" id="validationCustom02" name="lastname" placeholder="Last name" required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
@@ -137,7 +137,7 @@
                     <div class="form-row">
                         <div class="col-md-8 mb-3">
                             <label for="validationCustom03">Email address</label>
-                            <input type="text" class="form-control" id="validationCustom03" placeholder="Email" required>
+                            <input type="text" class="form-control" id="validationCustom03" name="mail" placeholder="Email" required>
                             <div class="valid-feedback">
                                 Please provide a valid city.
                             </div>
@@ -145,8 +145,8 @@
                     </div>
                     <div class="form-row">
                         <div class="col-md-8 mb-3">
-                            <label for="inputPassword5">New Password</label>
-                            <input type="password" class="form-control" id="inputPassword5" aria-describedby="passwordHelpBlock" placeholder="Password">
+                            <label for="inputPassword5">Password</label>
+                            <input type="password" class="form-control" id="inputPassword5" aria-describedby="passwordHelpBlock" name="password" placeholder="Password">
                             <div class="valid-feedback">
                                 Please provide a valid state.
                             </div>
@@ -155,8 +155,8 @@
 
                     <div class="form-row">
                         <div class="col-md-8 mb-3">
-                            <label for="inputPassword5">Confirm New Password</label>
-                            <input type="password" class="form-control" aria-describedby="passwordHelpBlock" placeholder="Password">
+                            <label for="inputPassword5">Confirm Password</label>
+                            <input type="password" class="form-control" aria-describedby="passwordHelpBlock" name="password_confirm" placeholder="Password">
                             <div class="invalid-feedback">
                                 Please provide a valid state.
                             </div>
@@ -187,7 +187,6 @@
                     })();
                 </script>-->
                 </div>
-                </form>
         </div>
 
 

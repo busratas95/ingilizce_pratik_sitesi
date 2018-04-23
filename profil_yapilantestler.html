@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INGILIZCE PRATIK SITESI</title>
+
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <style>
+
+        .nav {
+            font-weight: bold;
+            position: absolute;
+            left: 350px;
+            top: 60px;
+        }
+
+        .card-header {
+            height: 100px;
+        }
+
+        .list-group {
+            width: 342px;
+            position: absolute;
+            left: 0;
+            top: 150px;
+        }
+
+        .yapilantestler {
+            position: absolute;
+            left: 460px;
+            top: 150px;
+            width: 800px;
+        }
+
+        .badge {
+            width: 100px;
+            height: 25px;
+            display:table-cell;
+            vertical-align: middle;
+            font-size: large;
+        }
+
+        .progress {
+            height: 25px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+<div class="card text-center">                                                                      <!-- navbar anasayfa profil vs -->
+    <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs">
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">ANASAYFA</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#">PROFIL</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">PRATIK</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<br>
+
+<div>
+    <div class="list-group">                                                                        <!-- soldaki list group -->
+        <a href="#" class="list-group-item list-group-item-action">GENEL BILGILER</a>
+        <a href="#" class="list-group-item list-group-item-action active">YAPILAN TESTLER</a>
+    </div>
+</div>
+
+<div class="yapilantestler">                                                                          <!-- giris yapma divi -->
+    <div>
+        <form>
+            <div>
+                <span class="badge badge-light">TEST 1</span>
+                <br>
+
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                </div>
+            </div>
+            <br><br>
+            <div>
+                <span class="badge badge-light">TEST 2</span>
+                <br>
+
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                </div>
+            </div>
+            <br><br>
+            <div>
+                <span class="badge badge-light">TEST 3</span>
+                <br>
+
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
