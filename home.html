@@ -11,8 +11,8 @@
     .nav {
         font-weight: bold;
         position: absolute;
-        left: 350px;
-        top: 60px;
+        left: 21%;
+        top: 60%;
     }
 
     .card-header {
@@ -20,15 +20,15 @@
     }
 
     .list-group {
-        width: 342px;
+        width: 20%;
         position: absolute;
         left: 0;
-        top: 150px;
+        top: 25%;
     }
 
     .girisuyelikgenel {
         position: absolute;
-        left: 450px;
+        left: 1050px;
         top: 150px;
     }
 
@@ -43,17 +43,31 @@
     .girisuyelik {
         position: absolute;
         top: 80px;
-        width: 180%;
+        width: 280px;
     }
 
-    #uyelikformu {
+    .btn-danger {
         position: absolute;
-        left: 400px;
         top: 0px;
-        width: 180%;
+        left: 150px;
     }
 
+    .btn-success {
+        position: absolute;
+        top: 0px;
+        left: 30px;
+    }
 
+    .table {
+        position: relative;
+        left: 340px;
+        top: 25px;
+        width: 640px;
+    }
+
+    #uyeol {
+        width: 430px;
+    }
 
 </style>
 
@@ -67,13 +81,13 @@
         <ul class="nav nav-tabs card-header-tabs">
 
             <li class="nav-item">
-                <a class="nav-link active" href="#">ANASAYFA</a>
+                <a href="home.html" class="nav-link active">ANASAYFA</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link">PROFIL</a>
+                <a href="profil.html" class="nav-link">PROFIL</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link">PRATIK</a>
+                <a href="pratik.html" class="nav-link">PRATIK</a>
             </li>
         </ul>
     </div>
@@ -83,41 +97,307 @@
 
 <div>
     <div class="list-group">                                                                        <!-- soldaki list group -->
-        <a href="#" class="list-group-item list-group-item-action">INGILIZCE ZAMANLAR</a>
-        <a href="#" class="list-group-item list-group-item-action">INGILIZCE DILBILGISI</a>
-        <a href="#" class="list-group-item list-group-item-action">INGILIZCE KELIMELER</a>
-        <a href="#" class="list-group-item list-group-item-action">GUNLUK INGILIZCE</a>
-        <a href="#" class="list-group-item list-group-item-action disabled">INGILIZCE FIILLER</a>
+        <a href="zamanlar.html" class="list-group-item list-group-item-action active">INGILIZCE ZAMANLAR</a>
+        <a href="dilbilgisi.html" class="list-group-item list-group-item-action">INGILIZCE DILBILGISI</a>
+        <a href="kelimeler.html" class="list-group-item list-group-item-action">INGILIZCE KELIMELER</a>
+        <a href="gunluk.html" class="list-group-item list-group-item-action">GUNLUK INGILIZCE</a>
+        <a href="fiiller.html" class="list-group-item list-group-item-action">INGILIZCE FIILLER</a>
     </div>
 
 
-    <div class="girisuyelikgenel">                                                                          <!-- giris yapma divi -->
-        <div>
+    <table class="table">
+        <thead class="thead-light">
+        <tr>
+            <th colspan="2" scope="row">PRESENT CONTINUOUS TENSE (ŞİMDİKİ ZAMAN)</th>
+        </tr>
+        <tr>
+            <td><b>POSITIVE(+) :  </b></td>
+            <td>Subject + BE (am is are) + Verb-ING</td>
+        </tr>
+        <tr>
+            <td><b>NEGATIVE(-): </b></td>
+            <td>Subject + BE NOT (am not isn’t aren’t) + Verb-ING</td>
+        </tr>
+
+        </thead>
+
+    </table>
+
+    <table class="table">
+        <thead class="thead-light">
+        <tr>
+            <th colspan="2" scope="row">SIMPLE PRESENT TENSE (GENİŞ ZAMAN)</th>
+        </tr>
+
+        <tr>
+            <td rowspan="2"><b>POSITIVE (+): </b></td>
+            <td>I, you, we, they + verb </td>
+        </tr>
+        <tr>
+            <td>He,she,it + verbs</td>
+        </tr>
+
+        <tr>
+            <td rowspan="2"><b>NEGATIVE(-): </b></td>
+            <td>I, you, we, they + don’t verb</td>
+        </tr>
+        <tr>
+            <td>He, she, it + doesn’t Verb</td>
+        </tr>
+
+        </thead>
+
+    </table>
+
+    <table class="table">
+        <thead class="thead-light">
+
+        <tr>
+            <th colspan="2" scope="row">SIMPLE PAST TENSE (Dİ’Lİ GEÇMİŞ ZAMAN)</th>
+        </tr>
+
+        <tr>
+            <td><b>POSITIVE: (+): </b></td>
+            <td>I, you, he, she, it, we, you, they + verb2</td>
+        </tr>
+        <tr>
+            <td><b>NEGATIVE (-): </b></td>
+            <td>I, you, he, she, it, we, you, they + didn’t + verb1</td>
+        </tr>
+
+        </thead>
+
+    </table>
+
+    <table class="table">
+        <thead class="thead-light">
+        <tr>
+            <th colspan="2" scope="row">(SIMPLE) FUTURE TENSE (GELECEK ZAMAN)</th>
+        </tr>
+
+        <tr>
+            <td><b>POSITIVE (+): </b></td>
+            <td>I, you, he, she, it, we, you, they + will + verb</td>
+        </tr>
+        <tr>
+            <td><b>NEGATIVE (-): </b></td>
+            <td>I, you, he, she, it, we, you, they + will not (won’t) + verb</td>
+        </tr>
+
+        </thead>
+    </table>
+
+    <table class="table">
+        <thead class="thead-light">
+        <tr>
+            <th colspan="2" scope="row">PAST CONTINUOUS TENSE (ŞİMDİKİ ZAMANIN HİKAYESİ) </th>
+        </tr>
+
+        <tr>
+            <td rowspan="2"><b>POSITIVE (+): </b></td>
+            <td>I, he, she, it + was + verb-ing</td>
+        </tr>
+        <tr>
+            <td>We, you, they + were + verb-ing</td>
+        </tr>
+        <tr>
+            <td rowspan="2"><b>NEGATIVE (-): </b></td>
+            <td>I,he,she,it + was not (wasn’t)verb-ing</td>
+        </tr>
+        <tr>
+            <td>You,we,they + were not (weren’t) + verb-ing.</td>
+        </tr>
+
+        </thead>
+    </table>
+
+    <table class="table">
+        <thead class="thead-light">
+        <tr>
+            <th colspan="2" scope="row">BE GOING TO (YAKIN (KESİN) GELECEK ZAMAN)</th>
+        </tr>
+
+        <tr>
+            <td colspan="2">ÖZNE + BE GOING TO + FİİL (YALIN)  (be: am, is, are)</td>
+        </tr>
+        <tr>
+            <td rowspan="3"><b>POSITIVE (+): </b></td>
+            <td>I + am going to + verb </td>
+        </tr>
+        <tr>
+            <td>He, she, it + is going to + verb </td>
+        </tr>
+        <tr>
+            <td>We, you, they + are going to + verb</td>
+        </tr>
+        </tr>
+        <tr>
+            <td rowspan="3"><b>NEGATIVE (-): </b></td>
+            <td>I+ am not going to + verb </td>
+        </tr>
+        <tr>
+            <td>He,she,it + isn’t going to + verb </td>
+        </tr>
+        <tr>
+            <td>You, we, they + aren’t not going to + verb</td>
+        </tr>
+        </tr>
+
+        </thead>
+    </table>
+
+    <table class="table">
+        <thead class="thead-light">
+        <tr>
+            <th colspan="2" scope="row">FUTURE CONTINUOUS TENSE (SÜREGELEN GELECEK ZAMAN)</th>
+        </tr>
+
+        <tr>
+            <td><b>POSITIVE(+): </b></td>
+            <td>I, you, he, she, we, you, they + will be + verb-ing</td>
+        </tr>
+        <tr>
+            <td><b>NEGATIVE(-): </b></td>
+            <td>I, you, he, she, we, you, they + won’t be + verb-ing</td>
+        </tr>
+
+        </thead>
+    </table>
+
+    <table class="table">
+        <thead class="thead-light">
+        <tr>
+            <th colspan="2" scope="row">FUTURE PERFECT TENSE (GELECEK-ÖNCESİ ZAMAN)</th>
+        </tr>
+
+        <tr>
+            <td><b>POSITIVE(+):  </b></td>
+            <td>I, you, he, she, it, we, you, they + will have + verb-3</td>
+        </tr>
+        <tr>
+            <td><b>NEGATIVE(-): </b></td>
+            <td>I, you, he, she, it, we, you, they + won’t have + verb-3</td>
+        </tr>
+
+        </thead>
+    </table>
+
+    <table class="table">
+        <thead class="thead-light">
+        <tr>
+            <th colspan="2" scope="row">PRESENT PERFECT TENSE (YAKIN GEÇMİŞ ZAMAN)</th>
+        </tr>
+
+        <tr>
+            <td rowspan="2"><b>POSITIVE(+): </b></td>
+            <td>I, you, we, they + have + verb3</td>
+        </tr>
+        <tr>
+            <td>He, she, it + has + verb3</td>
+        </tr>
+        <tr>
+            <td rowspan="2"><b>NEGATIVE(-): </b></td>
+            <td>I, you, we, you, they + haven’t + verb3 </td>
+        </tr>
+        <tr>
+            <td>He, she, it + hasn’t + verb3</td>
+        </tr>
+
+        </thead>
+    </table>
+
+    <table class="table">
+        <thead class="thead-light">
+        <tr>
+            <th colspan="2" scope="row">PAST PERFECT TENSE (MİŞ’Lİ GEÇMİŞ ZAMAN)</th>
+        </tr>
+
+        <tr>
+            <td><b>POSITIVE(+): </b></td>
+            <td>I, you, he, she, it, we, they, + had + verb3</td>
+        </tr>
+        <tr>
+            <td><b>NEGATIVE(-): </b></td>
+            <td>I, you, he, she, it, we, you, they + hadn’t + verb3 </td>
+        </tr>
+
+        </thead>
+    </table>
+
+    <table class="table">
+        <thead class="thead-light">
+        <tr>
+            <th colspan="2" scope="row">PRESENT PERFECT CONTINUOUS TENSE  (mekteyim, maktayım)</th>
+        </tr>
+
+        <tr>
+            <td rowspan="2"><b>POSITIVE(+): </b></td>
+            <td>I, you, we, they + have been + verb-ing</td>
+        </tr>
+        <tr>
+            <td>He, she, it + has been + verb-ing</td>
+        </tr>
+        <tr>
+            <td rowspan="2"><b>NEGATIVE(-): </b></td>
+            <td>I, you, we, they + haven’t been + verb-ing </td>
+        </tr>
+        <tr>
+            <td>He, she, it + hasn’t been + verb-ing</td>
+        </tr>
+
+        </thead>
+    </table>
+
+    <table class="table">
+        <thead class="thead-light">
+        <tr>
+            <th colspan="2" scope="row">PAST PERFECT CONTINUOUS TENSE  (mekteydim, maktaydım)</th>
+        </tr>
+
+        <tr>
+            <td><b>POSITIVE(+): </b></td>
+            <td>I, you, we, they, he, she, it + had been + verb-ing</td>
+        </tr>
+        <tr>
+            <td><b>NEGATIVE(-): </b></td>
+            <td>I, you, we, they, he, she, it + hadn’t been + verb-ing</td>
+        </tr>
+
+        </thead>
+    </table>
+
+
+    <div class="girisuyelikgenel"> <!-- giris yapma divi -->
+
             <form>
-                <span class="badge badge-success">Giriş Yap</span>
-                <div class="girisuyelik">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="submit" class="btn btn-primary" id="grsblg">Submit</button>
+
+                <a href="javascript:show('giris');"><button type="button" class="btn btn-success">Giriş Yap</button></a>
+
+                <div class="girisuyelik" id="giris">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="grsblg">Submit</button>
                 </div>
             </form>
-        </div>
 
-        <div>
-                <div class="girisuyelik">
-                <form class="needs-validation" id="uyelikformu" method="post" action="register.php" novalidate>
-                    <span class="badge badge-danger">Üye Ol</span>
+
+            <form class="needs-validation" id="uyelikformu" method="post" action="register.php" novalidate>
+
+                <a href="javascript:change('uyeol');"><button type="button" class="btn btn-danger">Üye Ol</button></a>
+
+                <div class="girisuyelik" id="uyeol" style="display: none;">
+
                     <div class="form-row">
                         <div class="col-md-4 mb-3">
                             <label for="validationCustom01">First name</label>
@@ -164,35 +444,36 @@
                     </div>
 
                     <button class="btn btn-primary" type="submit">Submit form</button>
-                </form>
-
-<!--                <script>
-                    // Example starter JavaScript for disabling form submissions if there are invalid fields
-                    (function() {
-                        'use strict';
-                        window.addEventListener('load', function() {
-                            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                            var forms = document.getElementsByClassName('needs-validation');
-                            // Loop over them and prevent submission
-                            var validation = Array.prototype.filter.call(forms, function(form) {
-                                form.addEventListener('submit', function(event) {
-                                    if (form.checkValidity() === false) {
-                                        event.preventDefault();
-                                        event.stopPropagation();
-                                    }
-                                    form.classList.add('was-validated');
-                                }, false);
-                            });
-                        }, false);
-                    })();
-                </script>-->
                 </div>
-        </div>
 
+            </form>
 
     </div>
+
 </div>
 
+<script>
+
+    var x = document.getElementById("giris");
+    var y = document.getElementById("uyeol");
+
+    function show() {
+        if (x.style.display==="none")
+            x.style.display="block";
+            y.style.display="none";
+
+    }
+
+    function change() {
+        if (y.style.display==="none") {
+            y.style.display = "block";
+            x.style.display = "none";
+        }
+    }
+
+
+
+</script>
 
 </body>
 </html>
