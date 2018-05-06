@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <html>
 <head>
 <title>INGILIZCE PRATIK SITESI</title>
@@ -11,58 +12,49 @@
     .nav {
         font-weight: bold;
         position: absolute;
-        left: 21%;
+        left: 20.5%;
         top: 60%;
     }
 
     .card-header {
-        height: 100px;
+        height: 14%;
     }
 
     .list-group {
-        width: 20%;
+        width: 17%;
         position: absolute;
-        left: 0;
+        left: 1px;
         top: 25%;
     }
 
     .girisuyelikgenel {
         position: absolute;
-        left: 1050px;
-        top: 150px;
-    }
-
-    .badge {
-        width: 150px;
-        height: 36px;
-        display:table-cell;
-        vertical-align: middle;
-        font-size: large;
+        left: 68%;
+        top: 25%;
     }
 
     .girisuyelik {
         position: absolute;
-        top: 80px;
-        width: 280px;
+        top: 300%;
+        width: 250px;
     }
 
     .btn-danger {
         position: absolute;
-        top: 0px;
+        top: 0;
         left: 150px;
     }
 
     .btn-success {
         position: absolute;
-        top: 0px;
+        top: 0;
         left: 30px;
     }
 
     .table {
         position: relative;
-        left: 340px;
-        top: 25px;
-        width: 640px;
+        left: 20%;
+        width: 45%;
     }
 
     #uyeol {
@@ -81,27 +73,47 @@
         <ul class="nav nav-tabs card-header-tabs">
 
             <li class="nav-item">
-                <a href="home.html" class="nav-link active">ANASAYFA</a>
+                <a href="home.php" class="nav-link active">Ana Sayfa</a>
             </li>
             <li class="nav-item">
-                <a href="profil.html" class="nav-link">PROFIL</a>
+                <?php
+                    if(isset($_SESSION['session_id'])) {
+                        ?>
+                        <a href="profil.html" class="nav-link">Profil</a>
+                        <?php
+                    } else {
+                        ?>
+                        <div class="nav-link">Profil</div>
+                        <?php
+                    }
+                ?>
             </li>
             <li class="nav-item">
-                <a href="pratik.html" class="nav-link">PRATIK</a>
+                <?php
+                    if(isset($_SESSION['session_id'])) {
+                        ?>
+                        <a href="pratik.html" class="nav-link">Pratik Testler</a>
+                        <?php
+                    } else {
+                        ?>
+                        <div class="nav-link">Pratik Testler</div>
+                        <?php
+                    }
+                ?>
             </li>
         </ul>
     </div>
 </div>
 
-<br>
+<br />
 
 <div>
     <div class="list-group">                                                                        <!-- soldaki list group -->
-        <a href="zamanlar.html" class="list-group-item list-group-item-action active">INGILIZCE ZAMANLAR</a>
-        <a href="dilbilgisi.html" class="list-group-item list-group-item-action">INGILIZCE DILBILGISI</a>
-        <a href="kelimeler.html" class="list-group-item list-group-item-action">INGILIZCE KELIMELER</a>
-        <a href="gunluk.html" class="list-group-item list-group-item-action">GUNLUK INGILIZCE</a>
-        <a href="fiiller.html" class="list-group-item list-group-item-action">INGILIZCE FIILLER</a>
+        <div class="list-group-item list-group-item-action active">Zamanlar (Tenses)</div>
+        <a href="dilbilgisi.html" class="list-group-item list-group-item-action">Dil Bilgisi (Grammer)</a>
+        <a href="kelimeler.html" class="list-group-item list-group-item-action">İngilizce Kelimeler (Words)</a>
+        <a href="gunluk.html" class="list-group-item list-group-item-action">Günlük İngilizce<br />(Daily Usages)</a>
+        <a href="fiiller.html" class="list-group-item list-group-item-action">İngilizce Fiiller (Verbs)</a>
     </div>
 
 
@@ -366,109 +378,136 @@
         </thead>
     </table>
 
+    <?php
+        if(empty($_SESSION["session_id"])) {
+            ?>
 
-    <div class="girisuyelikgenel"> <!-- giris yapma divi -->
+            <div class="girisuyelikgenel"> <!-- giris yapma divi -->
 
-            <form>
+                <form action="login.php" method="post">
 
-                <a href="javascript:show('giris');"><button type="button" class="btn btn-success">Giriş Yap</button></a>
+                    <a href="javascript:show('login');">
+                        <button type="button" class="btn btn-success">Giriş Yap</button>
+                    </a>
 
-                <div class="girisuyelik" id="giris">
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    <div class="girisuyelik" id="giris">
+                        <div class="form-group">
+                            <label for="login_mail">Email adresiniz</label>
+                            <input type="email" class="form-control" id="login_mail" name="login_mail"
+                                   placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="login_password">Şifreniz</label>
+                            <input type="password" class="form-control" id="login_password" name="login_password"
+                                   placeholder="Şifre">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="login_remember_me"
+                                   name="login_remember_me">
+                            <label class="form-check-label" for="login_remember_me">Beni Hatırla</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="grsblg">Giriş</button>
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                    </div>
-                    <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary" id="grsblg">Submit</button>
-                </div>
-            </form>
+                </form>
 
 
-            <form class="needs-validation" id="uyelikformu" method="post" action="register.php" novalidate>
+                <form class="needs-validation" id="uyelikformu" method="post" action="register.php" novalidate>
 
-                <a href="javascript:change('uyeol');"><button type="button" class="btn btn-danger">Üye Ol</button></a>
+                    <a href="javascript:show('register');">
+                        <button type="button" class="btn btn-danger">Üye Ol</button>
+                    </a>
 
-                <div class="girisuyelik" id="uyeol" style="display: none;">
+                    <div class="girisuyelik" id="uyeol" style="display: none;">
 
-                    <div class="form-row">
-                        <div class="col-md-4 mb-3">
-                            <label for="validationCustom01">First name</label>
-                            <input type="text" class="form-control" id="validationCustom01" name="firstname" placeholder="First name" required>
-                            <div class="valid-feedback">
-                                Looks good!
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                                <label for="validationCustom01">Adınız</label>
+                                <input type="text" class="form-control" id="validationCustom01" name="firstname"
+                                       placeholder="Ad" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="validationCustom02">Soyadınız</label>
+                                <input type="text" class="form-control" id="validationCustom02" name="lastname"
+                                       placeholder="Soyad" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-3">
-                            <label for="validationCustom02">Last name</label>
-                            <input type="text" class="form-control" id="validationCustom02" name="lastname" placeholder="Last name" required>
-                            <div class="valid-feedback">
-                                Looks good!
+                        <div class="form-row">
+                            <div class="col-md-8 mb-3">
+                                <label for="validationCustom03">Email adresiniz</label>
+                                <input type="text" class="form-control" id="validationCustom03" name="mail"
+                                       placeholder="Email" required>
+                                <div class="valid-feedback">
+                                    Please provide a valid city.
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col-md-8 mb-3">
-                            <label for="validationCustom03">Email address</label>
-                            <input type="text" class="form-control" id="validationCustom03" name="mail" placeholder="Email" required>
-                            <div class="valid-feedback">
-                                Please provide a valid city.
+                        <div class="form-row">
+                            <div class="col-md-8 mb-3">
+                                <label for="inputPassword5">Şifreniz</label>
+                                <input type="password" class="form-control" id="inputPassword5"
+                                       aria-describedby="passwordHelpBlock" name="password" placeholder="Şifre">
+                                <div class="valid-feedback">
+                                    Please provide a valid state.
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col-md-8 mb-3">
-                            <label for="inputPassword5">Password</label>
-                            <input type="password" class="form-control" id="inputPassword5" aria-describedby="passwordHelpBlock" name="password" placeholder="Password">
-                            <div class="valid-feedback">
-                                Please provide a valid state.
+
+                        <div class="form-row">
+                            <div class="col-md-8 mb-3">
+                                <label for="inputPassword5">Şifreniz (Tekrar)</label>
+                                <input type="password" class="form-control" aria-describedby="passwordHelpBlock"
+                                       name="password_confirm" placeholder="Şifre (Tekrar)">
+                                <div class="invalid-feedback">
+                                    Please provide a valid state.
+                                </div>
                             </div>
                         </div>
+
+                        <button class="btn btn-primary" type="submit">Kayıt Ol</button>
                     </div>
 
-                    <div class="form-row">
-                        <div class="col-md-8 mb-3">
-                            <label for="inputPassword5">Confirm Password</label>
-                            <input type="password" class="form-control" aria-describedby="passwordHelpBlock" name="password_confirm" placeholder="Password">
-                            <div class="invalid-feedback">
-                                Please provide a valid state.
-                            </div>
-                        </div>
-                    </div>
+                </form>
 
-                    <button class="btn btn-primary" type="submit">Submit form</button>
-                </div>
+            </div>
 
-            </form>
-
-    </div>
+            <?php
+        } else {
+            ?>
+            <div class="girisuyelikgenel">
+                <form action="logout.php" method="post">
+                    <button class="btn btn-danger" type="submit">Çıkış Yap</button>
+                </form>
+            </div>
+            <?php
+        }
+    ?>
 
 </div>
 
 <script>
 
-    var x = document.getElementById("giris");
-    var y = document.getElementById("uyeol");
+    const login_button = document.getElementById("giris");
+    const register_button = document.getElementById("uyeol");
 
-    function show() {
-        if (x.style.display==="none")
-            x.style.display="block";
-            y.style.display="none";
-
-    }
-
-    function change() {
-        if (y.style.display==="none") {
-            y.style.display = "block";
-            x.style.display = "none";
+    function show(mode) {
+        if(mode === 'login') {
+            if(login_button.style.display === "none") {
+                register_button.style.display = "none";
+                login_button.style.display = "block";
+            }
+        } else if(mode === 'register') {
+            if(register_button.style.display === "none") {
+                login_button.style.display = "none";
+                register_button.style.display = "block";
+            }
         }
+
     }
 
 
