@@ -1,82 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>INGILIZCE PRATIK SITESI</title>
-
-    <link rel="stylesheet" href="bootstrap.min.css">
-
-    <style>
-
-        .nav {
-            font-weight: bold;
-            position: absolute;
-            left: 21%;
-            top: 60%;
-        }
-
-        .card-header {
-            height: 100px;
-        }
-
-        .list-group {
-            width: 20%;
-            position: absolute;
-            left: 0;
-            top: 25%;
-        }
-
-        .jumbotron {
-            position: relative;
-            left: 29%;
-            top: 38px;
-            width: 60%;
-        }
-
-        .bilgi {
-            padding: 25px;
-
-        }
-
-        p a {
-
-        }
-
-    </style>
-
-
-</head>
-<body>
-
-<div class="card text-center">                                                                      <!-- navbar anasayfa profil vs -->
-    <div class="card-header">
-        <ul class="nav nav-tabs card-header-tabs">
-
-            <li class="nav-item">
-                <a class="nav-link" href="home.php">ANASAYFA</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="profil.html">PROFIL</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="pratik.html">PRATIK</a>
-            </li>
-        </ul>
-    </div>
-</div>
-
-<br>
-
-<div>
-    <div class="list-group">                                                                        <!-- soldaki list group -->
-        <a href="zamanlar.html" class="list-group-item list-group-item-action">INGILIZCE ZAMANLAR</a>
-        <a href="dilbilgisi.html" class="list-group-item list-group-item-action">INGILIZCE DILBILGISI</a>
-        <a href="kelimeler.html" class="list-group-item list-group-item-action">INGILIZCE KELIMELER</a>
-        <a href="gunluk.html" class="list-group-item list-group-item-action active">GUNLUK INGILIZCE</a>
-        <a href="fiiller.html" class="list-group-item list-group-item-action">INGILIZCE FIILLER</a>
-    </div>
-</div>
-
 <div class="jumbotron">
     <h1 class="display-4">GUNLUK HAYATTA KULLANILAN KALIPLAR</h1>
     <p class="lead"> İngilizce konuşurken biraz sonra sıralayacağımız cümleleri çok sık kullanırız. İster günlük hayatta, ister işyerinde, ister okulda girdiğimiz diyaloglarda bu temel İngilizce cümleler vardır. Hatta bazen kendimizi kompleks cümleler kurmaya çalışırken buluruz ama aslında anlatmaya çalıştığımız şeyi çok daha kısa cümlelerle anlatmamız mümkündür.
@@ -85,7 +6,9 @@
     <hr class="my-4">
 
 
-    <a href="javascript:show('p1');"><button type="button" class="btn btn-outline-info">TANISMA</button></a><br><br>
+    <a href="javascript:show_div('p1');">
+        <button type="button" class="btn btn-outline-info">TANISMA</button>
+    </a><br><br>
     <p class="bilgi" id="p1" style="display: none; background-color: #ffdcb9">Hi! My name is Busra: Merhaba! Benim ismim Busra.
     <br>
     Where are you from: Nerelisin?
@@ -114,7 +37,9 @@
     <br>
     That my pleasure: O zevk bana ait.</p>
 
-    <a href="javascript:show('p2');"><button type="button" class="btn btn-outline-info">YARDIM ISTERKEN</button></a><br><br>
+    <a href="javascript:show_div('p2');">
+        <button type="button" class="btn btn-outline-info">YARDIM ISTERKEN</button>
+    </a><br><br>
     <p class="bilgi" id="p2" style="display: none; background-color: #ffdcb9">Are you okay: İyi misiniz?
     <br>
     No, i’m not okay: Hayır, iyi değilim.
@@ -127,7 +52,9 @@
     <br>
     This is very kind of you: Çok naziksiniz.</p>
 
-    <a href="javascript:show('p3');"><button type="button" class="btn btn-outline-info">VEDALASIRKEN</button></a><br><br>
+    <a href="javascript:show_div('p3');">
+        <button type="button" class="btn btn-outline-info">VEDALASIRKEN</button>
+    </a><br><br>
     <p class="bilgi" id="p3" style="display: none; background-color: #ffdcb9">Good to see you: Seni gördüğüme sevindim.
         <br>
         Keep in touch: İrtibatta kalalım.
@@ -140,7 +67,9 @@
         <br>
         Bye bye: Güle güle</p>
 
-    <a href="javascript:show('p4');"><button type="button" class="btn btn-outline-info">ADRES SORARKEN</button></a><br><br>
+    <a href="javascript:show_div('p4');">
+        <button type="button" class="btn btn-outline-info">ADRES SORARKEN</button>
+    </a><br><br>
     <p class="bilgi" id="p4" style="display: none; background-color: #ffdcb9">How can I get to the museum: Müzeye nasıl gidebilirim
         <br>
         I’m lost: Kayboldum.
@@ -151,7 +80,9 @@
         <br>
         Do you understand?: Anladın mı?</p>
 
-    <a href="javascript:show('p5');"><button type="button" class="btn btn-outline-info">BIRINI SAKINLESTIRIRKEN</button></a><br><br>
+    <a href="javascript:show_div('p5');">
+        <button type="button" class="btn btn-outline-info">BIRINI SAKINLESTIRIRKEN</button>
+    </a><br><br>
     <p class="bilgi" id="p5" style="display: none; background-color: #ffdcb9">Don’t worry: Endişelenme.
         <br>
         I’m little bit a nerveous: Biraz gerginim.
@@ -164,7 +95,9 @@
         <br>
         I’m not feeling good: İyi hissetmiyorum.</p>
 
-    <a href="javascript:show('p6');"><button type="button" class="btn btn-outline-info">KUTLAMA YAPARKEN</button></a><br><br>
+    <a href="javascript:show_div('p6');">
+        <button type="button" class="btn btn-outline-info">KUTLAMA YAPARKEN</button>
+    </a><br><br>
     <p class="bilgi" id="p6" style="display: none; background-color: #ffdcb9">Congratulations: Tebrikler.
         <br>
         Good job: İyi iş.
@@ -181,14 +114,18 @@
         <br>
         I’m flattered: Gururum okşandı.</p>
 
-    <a href="javascript:show('p7');"><button type="button" class="btn btn-outline-info">UZUNTU BELIRTIRKEN</button></a><br><br>
+    <a href="javascript:show_div('p7');">
+        <button type="button" class="btn btn-outline-info">UZUNTU BELIRTIRKEN</button>
+    </a><br><br>
     <p class="bilgi" id="p7" style="display: none; background-color: #ffdcb9">What’s the matter?: Neyin var?
         <br>
         Forgive me: Affet beni.
         <br>
         I’m sorry: Üzgünüm.</p>
 
-    <a href="javascript:show('p8');"><button type="button" class="btn btn-outline-info">HEYECAN BELIRTIRKEN</button></a><br><br>
+    <a href="javascript:show_div('p8');">
+        <button type="button" class="btn btn-outline-info">HEYECAN BELIRTIRKEN</button>
+    </a><br><br>
     <p class="bilgi" id="p8" style="display: none; background-color: #ffdcb9">Let’s do this: Hadi yapalım!
         <br>
         Let’s go: Hadi gidelim!
@@ -199,14 +136,18 @@
         <br>
         You can make it: Yapabilirsin!</p>
 
-    <a href="javascript:show('p9');"><button type="button" class="btn btn-outline-info">TEKLIFTE BULUNURKEN</button></a><br><br>
+    <a href="javascript:show_div('p9');">
+        <button type="button" class="btn btn-outline-info">TEKLIFTE BULUNURKEN</button>
+    </a><br><br>
     <p class="bilgi" id="p9" style="display: none; background-color: #ffdcb9">Will you marry me?: Benimle evlenir misin?
         <br>
         Will you go out with me?: Benimle çıkar mısın?
         <br>
         Do you wanna hang out?: Takılmak ister misin?</p>
 
-    <a href="javascript:show('p10');"><button type="button" class="btn btn-outline-info">UNLEM CUMLELERI</button></a><br><br>
+    <a href="javascript:show_div('p10');">
+        <button type="button" class="btn btn-outline-info">UNLEM CUMLELERI</button>
+    </a><br><br>
     <p class="bilgi" id="p10" style="display: none; background-color: #ffdcb9">Be careful!: Dikkat et!
         <br>
         Shut up!: Kapa çeneni!
@@ -229,7 +170,9 @@
         <br>
         None of your bussines!: Seni ilgilendirmez!</p>
 
-    <a href="javascript:show('p11');"><button type="button" class="btn btn-outline-info">YEMEKTE</button></a><br><br>
+    <a href="javascript:show_div('p11');">
+        <button type="button" class="btn btn-outline-info">YEMEKTE</button>
+    </a><br><br>
     <p class="bilgi" id="p11" style="display: none; background-color: #ffdcb9">Do you have reservation?: Rezervasyon yaptırmış mıydınız?
         <br>
         May ı see the menu?: Menüyü görebilir miyim?
@@ -244,7 +187,9 @@
         <br>
         I’m full: Tokum.</p>
 
-    <a href="javascript:show('p12');"><button type="button" class="btn btn-outline-info">ALISVERISTE</button></a><br><br>
+    <a href="javascript:show_div('p12');">
+        <button type="button" class="btn btn-outline-info">ALISVERISTE</button>
+    </a><br><br>
     <p class="bilgi" id="p12" style="display: none; background-color: #ffdcb9">Is there anything ı can get for you: Sizin için yapabilceğim bir şey var mı?
         <br>
         Thank you, ı’m just koolking: Sağolun, sadece bakınıyorum
@@ -267,7 +212,9 @@
         <br>
         Can you gift-wrapped?: Hediye paketi yapar mısınız?</p>
 
-    <a href="javascript:show('p13');"><button type="button" class="btn btn-outline-info">KIZGINKEN</button></a><br><br>
+    <a href="javascript:show_div('p13');">
+        <button type="button" class="btn btn-outline-info">KIZGINKEN</button>
+    </a><br><br>
     <p class="bilgi" id="p13" style="display: none; background-color: #ffdcb9">That your fault: Bu senin hatan.
         <br>
         I’dont wanna see you anymore: Seni artık görmek istemiyorum.
@@ -276,7 +223,9 @@
         <br>
         How could you do this to me: Bunu bana nasıl yapabildin?</p>
 
-    <a href="javascript:show('p14');"><button type="button" class="btn btn-outline-info">DEYIMLER</button></a><br><br>
+    <a href="javascript:show_div('p14');">
+        <button type="button" class="btn btn-outline-info">DEYIMLER</button>
+    </a><br><br>
     <p class="bilgi" id="p14" style="display: none; background-color: #ffdcb9">If you can dream it, you can do it:  Hayal edebiliyorsan, yapabilirsin.
         <br>
         Give me a hand: Yardım et.
@@ -291,7 +240,9 @@
         <br>
         Freeze!: Olduğun yerde kal!</p>
 
-    <a href="javascript:show('p15');"><button type="button" class="btn btn-outline-info">GENEL KALIPLAR</button></a><br><br>
+    <a href="javascript:show_div('p15');">
+        <button type="button" class="btn btn-outline-info">GENEL KALIPLAR</button>
+    </a><br><br>
     <p class="bilgi" id="p15" style="display: none; background-color: #ffdcb9">Absolutely not. – Kesinlikle olmaz. Kesinlikle hayır.
         <br>
         <br>Are you coming with me? – Benimle geliyor musun?
@@ -366,7 +317,7 @@
 </div>
 
 <script>
-    function show(b) {
+    function show_div(b) {
         let x = document.getElementById(b);
         if (x.style.display==="none")
             x.style.display="block";
@@ -374,8 +325,3 @@
             x.style.display="none";
     }
 </script>
-
-
-
-</body>
-</html>

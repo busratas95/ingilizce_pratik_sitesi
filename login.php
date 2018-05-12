@@ -33,6 +33,6 @@ session_start();
 $_SESSION["session_id"] = time();
 $_SESSION["user_firstname"] = $row["firstname"];
 
-//header("Location: home.php");
+//header("Location: index.php");
 
 $mysql_connection->close();

@@ -1,0 +1,88 @@
+Be (am, is, are)	Was/Were	Been	Olmak
+Beat	Beat	Beaten	Vurmak/Yenmek
+Become	Became	Become	Olmak
+Begin	Began	Begun	Başlamak
+Bite	Bit	Bitten	Isırmak
+Bleed	Bled	Bled	Kanamak
+Blow	Blew	Blown	Esmek
+Break	Broke	Broken	Kırmak
+Bring	Brought	Brought	Getirmek
+Build	Built	Built	İnşa etmek
+Buy	Bought	Bought	Satın almak
+Catch	Caught	Caught	Yakalamak
+Choose	Chose	Chosen	Seçmek
+Come	Came	Come	Gelmek
+Cost	Cost	Cost	Mal olmak
+Cut	Cut	Cut	Kesmek
+Do	Did	Done	Yapmak
+Draw	Drew	Drawn	Çizmek
+Drink	Drank	Drunk	İçmek
+Drive	Drove	Driven	Araba sürmek
+Eat	Ate	Eaten	Yemek
+Fall	Fell	Fallen	Düşmek
+Feed	Fed	Fed	Beslemek
+Feel	Felt	Felt	Hissetmek
+Fight	Fought	Fought	Kavga etmek
+Find	Found	Found	Bulmak
+Fly	Flew	Flown	Uçmak
+Forbid	Forbade	Forbidden	Yasaklamak
+Forget	Forgot	Forgotten	Unutmak
+Forgive	Forgave	Forgiven	Affetmek
+Freeze	Froze	Frozen	Donmak
+Get	Got	Got	Elde etmek/almak
+Give	Gave	Given	Vermek
+Go	Went	Gone	Gitmek
+Grow	Grew	Grown	Büyümek
+Have/has	Had	Had	Sahip olmak
+Hear	Heard	Heard	Duymak
+Hide	Hid	Hidden	Saklamak
+Hit	Hit	Hit	Vurmak
+Hold	Hed	Held	Tutmak
+Hurt	Hurt	Hurt	İncitmek
+Keep	Kept	Kept	Korumak
+Know	Knew	Known	Bilmek
+Lend	Lent	Lent	Ödünç vermek
+Let	Let	Let	İzin vermek
+Lie	Lay	Lain	Yalan söylemek
+Lose	Lost	Lost	Kaybetmek
+Make	Made	Made	Yapmak
+Mean	Meant	Meant	Demek
+Meet	Met	Met	Buluşmak
+Mistake	Mistook	Mistaken	Hata yapmak
+Pay	Paid	Paid	Ödemek
+Put	Put	Put	Koymak
+Read	Read	Read	Okumak
+Ride	Rode	Ridden	Binmek
+Ring	Rang	Rung	Zil çalmak
+Run	Ran	Run	Koşmak
+Say	Said	Said	Söylemek
+See	Saw	Seen	Görmek
+Sell	Sold	Sold	Satmak
+Send	Sent	Sent	Göndermek
+Set	Set	Set	Kurmak
+Shake	Shook	Shaken	Sallamak
+Shine	Shone	Shone	Parlamak
+Shoot	Shot	Shot	Ateş etmek
+Shut	Shut	Shut	Kapatmak
+Sing	Sang	Sung	Şarkı söylemek
+Sink	Sank	Sunk	Batmak
+Sit	Sat	Sat	Oturmak
+Sleep	Slept	Slept	Uyumak
+Speak	Spoke	Spoken	Konuşmak
+Spend	Spent	Spent	Harcamak
+Stand	Stood	Stood	Ayakta durmak
+Steal	Stole	Stolen	Çalmak
+Stick	Stuck	Stuck	Yapıştırmak
+Strike	Struck	Struck	Vurmak
+Swear	Swore	Sworn	Yemin etmek
+Swim	Swam	Swum	Yüzmek
+Take	Took	Taken	Almak
+Teach	Taught	Taught	Öğretmek
+Tell	Told	Told	Anlatmak/söylemek
+Think	Thought	Thought	Düşünmek
+Throw	Threw	Thrown	Atmak
+Understand	Understood	Understood	Anlamak
+Wake	Woke	Woken	Uyandırmak
+Wear	Wore	Worn	Giymek
+Win	Won	Won	Kazanmak
+Write	Wrote	Written	Yazmak
