@@ -1,0 +1,104 @@
+{
+  "questions": {
+    "0": {
+      "question_text": "Mary is a ballet dancer. She is good at %%% .",
+      "answers": {
+        "a": "buying some clothes",
+        "b": "dancing and singing",
+        "c": "play tennis",
+        "d": "do her homework"
+      },
+      "correct_answer": "b"
+    },
+    "1": {
+      "question_text": "He didn't start climbing %%% he was fourteen.",
+      "answers": {
+        "a": "until",
+        "b": "what",
+        "c": "at",
+        "d": "which"
+      },
+      "correct_answer": "a"
+    },
+    "2": {
+      "question_text": "Let's go to the beach. I will %%% .",
+      "answers": {
+        "a": "watch a video",
+        "b": "stay at home",
+        "c": "get my swimming costume",
+        "d": "sleep and get up early"
+      },
+      "correct_answer": "c"
+    },
+    "3": {
+      "question_text": "I am saving my money %%% a DVD player.",
+      "answers": {
+        "a": "to clean",
+        "b": "to open",
+        "c": "to buy",
+        "d": "to watch"
+      },
+      "correct_answer": "c"
+    },
+    "4": {
+      "question_text": "It is raining again. Let's %%% .",
+      "answers": {
+        "a": "climb mountains without ropes",
+        "b": "have a walk",
+        "c": "meet some friends",
+        "d": "stay in a tent and eat"
+      },
+      "correct_answer": "d"
+    },
+    "5": {
+      "question_text": "We are going to Paris to %%% .",
+      "answers": {
+        "a": "have a holiday",
+        "b": "go to the beach",
+        "c": "ride a bicycle",
+        "d": "wash our hair"
+      },
+      "correct_answer": "a"
+    },
+    "6": {
+      "question_text": "You have %%% lovely pictures on the walls.",
+      "answers": {
+        "a": "a little",
+        "b": "some",
+        "c": "much",
+        "d": "any"
+      },
+      "correct_answer": "c"
+    },
+    "7": {
+      "question_text": "%%% is the %%% person in the world?",
+      "answers": {
+        "a": "who/taller",
+        "b": "what/beautiful",
+        "c": "who/richest",
+        "d": "whose/more intelligent"
+      },
+      "correct_answer": "c"
+    },
+    "8": {
+      "question_text": "I'd like %%% hamburger and %%% chips, please.",
+      "answers": {
+        "a": "an/any",
+        "b": "any/a",
+        "c": "some/an",
+        "d": "a/some"
+      },
+      "correct_answer": "d"
+    },
+    "9": {
+      "question_text": "They %%% living in Paris.",
+      "answers": {
+        "a": "don't like",
+        "b": "aren't like",
+        "c": "are like",
+        "d": "were like"
+      },
+      "correct_answer": "a"
+    }
+  }
+}

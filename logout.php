@@ -12,4 +12,4 @@ session_unset();
 
 session_destroy();
 
-echo "Bye";
+echo "ok";

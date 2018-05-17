@@ -30,7 +30,7 @@ $hashed_user_password = md5($user_password);
 $create_new_user_sql_command = "INSERT INTO user VALUES('', '$user_mail', '$user_firstname', '$user_lastname', '$hashed_user_password')";
 
 if($mysql_connection->query($create_new_user_sql_command) === TRUE)
-    echo "User created successfully";
+    echo "ok";
 else
     die("Error: " . $mysql_connection->error);
 

@@ -1,0 +1,104 @@
+{
+  "questions": {
+    "0": {
+      "question_text": "-What is the time?\n-Sorry, I don't have a %%% .",
+      "answers": {
+        "a": "camera",
+        "b": "radio",
+        "c": "computer",
+        "d": "watch"
+      },
+      "correct_answer": "d"
+    },
+    "1": {
+      "question_text": "%%% have to serve food.",
+      "answers": {
+        "a": "Airhostesses",
+        "b": "The queen",
+        "c": "Soldiers",
+        "d": "Dentists"
+      },
+      "correct_answer": "a"
+    },
+    "2": {
+      "question_text": "I am going %%% the walls of my house white.",
+      "answers": {
+        "a": "to draw",
+        "b": "to point",
+        "c": "to paint",
+        "d": "to climb"
+      },
+      "correct_answer": "c"
+    },
+    "3": {
+      "question_text": "Could you %%% the lights %%% , please? It is getting dark.",
+      "answers": {
+        "a": "turn / on",
+        "b": "put / on",
+        "c": "turn / off",
+        "d": "put / off"
+      },
+      "correct_answer": "a"
+    },
+    "4": {
+      "question_text": "He %%% Alice (that) it was a wonderful party.",
+      "answers": {
+        "a": "said",
+        "b": "told",
+        "c": "tell",
+        "d": "say"
+      },
+      "correct_answer": "b"
+    },
+    "5": {
+      "question_text": "I don't want %%% tonight. Let's %%% .",
+      "answers": {
+        "a": "to eat / cook meals at home",
+        "b": "to watch a film / go to the cinema",
+        "c": "eat / cooks dinner",
+        "d": "to cook / eat out"
+      },
+      "correct_answer": "d"
+    },
+    "6": {
+      "question_text": "%%% speak a foreign language very well.",
+      "answers": {
+        "a": "Interpreters",
+        "b": "Butchers",
+        "c": "Soldiers",
+        "d": "Nurses"
+      },
+      "correct_answer": "c"
+    },
+    "7": {
+      "question_text": "She has tried %%% smoking, but she %%% .",
+      "answers": {
+        "a": "to stop / can't",
+        "b": "to stop / can",
+        "c": "stop / can",
+        "d": "stopping / can"
+      },
+      "correct_answer": "a"
+    },
+    "8": {
+      "question_text": "We have &&& to leave this city.",
+      "answers": {
+        "a": "think",
+        "b": "decided",
+        "c": "wants",
+        "d": "visited"
+      },
+      "correct_answer": "b"
+    },
+    "9": {
+      "question_text": "- I'm bored.\n\n\n\n- Do you want %%% cards?",
+      "answers": {
+        "a": "to play",
+        "b": "to make",
+        "c": "to do",
+        "d": "to drink"
+      },
+      "correct_answer": "a"
+    }
+  }
+}

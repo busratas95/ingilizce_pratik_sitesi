@@ -1,4 +1,5 @@
 <?php session_start(); ?>
+<?php include_once "pages/navbarchooser.php"; ?>
 <html>
 <head>
     <title>INGILIZCE PRATIK SITESI</title>
@@ -100,13 +101,28 @@
 
         }
 
+        .divtest {
+            background-color: #ffdec2;
+            padding: 5%;
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            width: 50%;
+            height: 50%;
+        }
+
+        #soruparagrafi {
+            padding-right: 15%;
+            position: relative;
+            top: 0;
+        }
+
     </style>
 
     <script>
         $(document).ready(function () {
             $("#search_form").submit(function () {
                 event.preventDefault();
-                console.log("filter = " + $("#search_filter").text().trim());
                 $.get("sozluk.php", {
                     term: $("#search_term").val(),
                     filter: $("#search_filter").text().trim()
@@ -140,6 +156,94 @@
             });
 
         });
+        $(document).ready(function () {
+            $("#signUpForm").submit(function () {
+                event.preventDefault();
+                let form = $(this);
+                let serializedData = form.serialize();
+
+                $.post("register.php", serializedData, function (data) {
+                    if (data === "ok") {
+                        $.post("login.php", {
+                            login_mail: $("#mail").val(),
+                            login_password: $("#password").val()
+                        }, function (data) {
+                            if (data === "ok")
+                                location.reload(true);
+                            else
+                                alert(data);
+                        })
+                    } else {
+                        alert(data);
+                    }
+                });
+            });
+        });
+        $(document).ready(function () {
+            $("#loginForm").submit(function () {
+                event.preventDefault();
+                let form = $(this);
+                let serializedData = form.serialize();
+
+                $.post("login.php", serializedData, function (data) {
+                    if (data === "ok")
+                        location.reload(true);
+                    else
+                        alert(data);
+                });
+            });
+        });
+        $(document).ready(function () {
+            $("#logoutForm").submit(function () {
+                event.preventDefault();
+                $.post("logout.php", null, function (data) {
+                    if (data === "ok") {
+                        if (location.toString().includes("profile"))
+                            location.href = "/index.php";
+                        else
+                            location.reload();
+                    }
+                });
+            });
+        });
+        $(document).ready(function () {
+            $("#changePasswordForm").submit(function () {
+                event.preventDefault();
+                let form = $(this);
+                let serializedData = form.serialize();
+                $.post("change_password.php", serializedData, function (data) {
+                    let retval = JSON.parse(data);
+                    if (retval.status === "ok") {
+                        $("#negativeFeedback").hide();
+                        form.trigger("reset");
+                        $("#positiveFeedback").show("slow");
+                        $("#positiveFeedbackMessage").text(retval.text);
+                    } else {
+                        $("#positiveFeedback").hide();
+                        $("#negativeFeedback").show("slow");
+                        $("#negativeFeedbackMessage").text(retval.text);
+                    }
+                })
+            });
+        });
+        $(document).ready(function () {
+            $("#testForm").submit(function () {
+                event.preventDefault();
+                let form = $(this);
+                let serializedData = form.serialize();
+                $.post("./check_test_answer.php", serializedData, function (data) {
+                    if (data === "ok") {
+                        location.reload(true);
+                        $("#wrongAnswerFeedback").hide();
+                        $("#correctAnswerFeedback").show("slow");
+                    }
+                    else {
+                        $("#correctAnswerFeedback").hide();
+                        $("#wrongAnswerFeedback").show("slow");
+                    }
+                })
+            })
+        })
     </script>
 
 </head>
@@ -153,17 +257,17 @@
         <ul class="nav nav-tabs card-header-tabs">
 
             <li class="nav-item">
-                <a href="index.php" class="nav-link active">Ana Sayfa</a>
+                <a href="index.php" class="nav-link <?= isActive("home"); ?>">Ana Sayfa</a>
             </li>
             <li class="nav-item">
                 <?php
                 if (isset($_SESSION['session_id'])) {
                     ?>
-                    <a href="profil.html" class="nav-link">Profil</a>
+                    <a href="?page=practice_test" class="nav-link <?= isActive("practice_test"); ?>">Pratik Testler</a>
                     <?php
                 } else {
                     ?>
-                    <div class="nav-link">Profil</div>
+                    <div class="nav-link">Pratik Testler</div>
                     <?php
                 }
                 ?>
@@ -172,11 +276,11 @@
                 <?php
                 if (isset($_SESSION['session_id'])) {
                     ?>
-                    <a href="pratik.html" class="nav-link">Pratik Testler</a>
+                    <a href="?page=profile" class="nav-link <?= isActive("profile"); ?>">Profil</a>
                     <?php
                 } else {
                     ?>
-                    <div class="nav-link">Pratik Testler</div>
+                    <div class="nav-link">Profil</div>
                     <?php
                 }
                 ?>
@@ -200,13 +304,10 @@
         ?>
 
         <div class="girisuyelikgenel"> <!-- giris yapma divi -->
-
-            <form action="login.php" method="post">
-
                 <a href="javascript:show('login');">
                     <button type="button" class="btn btn-success">Giriş Yap</button>
                 </a>
-
+            <form id="loginForm">
                 <div class="girisuyelik" id="giris">
                     <div class="form-group">
                         <label for="login_mail">Email adresiniz</label>
@@ -228,7 +329,7 @@
             </form>
 
 
-            <form class="needs-validation" id="uyelikformu" method="post" action="register.php" novalidate>
+            <form class="needs-validation" id="signUpForm" method="post" novalidate>
 
                 <a href="javascript:show('register');">
                     <button type="button" class="btn btn-danger">Üye Ol</button>
@@ -239,7 +340,7 @@
                     <div class="form-row">
                         <div class="col-md-4 mb-3">
                             <label for="validationCustom01">Adınız</label>
-                            <input type="text" class="form-control" id="validationCustom01" name="firstname"
+                            <input type="text" class="form-control" id="firstname" name="firstname"
                                    placeholder="Ad" required>
                             <div class="valid-feedback">
                                 Looks good!
@@ -247,7 +348,7 @@
                         </div>
                         <div class="col-md-4 mb-3">
                             <label for="validationCustom02">Soyadınız</label>
-                            <input type="text" class="form-control" id="validationCustom02" name="lastname"
+                            <input type="text" class="form-control" id="lastname" name="lastname"
                                    placeholder="Soyad" required>
                             <div class="valid-feedback">
                                 Looks good!
@@ -257,7 +358,7 @@
                     <div class="form-row">
                         <div class="col-md-8 mb-3">
                             <label for="validationCustom03">Email adresiniz</label>
-                            <input type="text" class="form-control" id="validationCustom03" name="mail"
+                            <input type="text" class="form-control" id="mail" name="mail"
                                    placeholder="Email" required>
                             <div class="valid-feedback">
                                 Please provide a valid city.
@@ -267,7 +368,7 @@
                     <div class="form-row">
                         <div class="col-md-8 mb-3">
                             <label for="inputPassword5">Şifreniz</label>
-                            <input type="password" class="form-control" id="inputPassword5"
+                            <input type="password" class="form-control" id="password"
                                    aria-describedby="passwordHelpBlock" name="password" placeholder="Şifre">
                             <div class="valid-feedback">
                                 Please provide a valid state.
@@ -279,6 +380,7 @@
                         <div class="col-md-8 mb-3">
                             <label for="inputPassword5">Şifreniz (Tekrar)</label>
                             <input type="password" class="form-control" aria-describedby="passwordHelpBlock"
+                                   id="password_confirm"
                                    name="password_confirm" placeholder="Şifre (Tekrar)">
                             <div class="invalid-feedback">
                                 Please provide a valid state.
@@ -297,7 +399,7 @@
     } else {
         ?>
         <div class="girisuyelikgenel">
-            <form action="logout.php" method="post">
+            <form id="logoutForm">
                 <button class="btn btn-danger" type="submit">Çıkış Yap</button>
             </form>
         </div>

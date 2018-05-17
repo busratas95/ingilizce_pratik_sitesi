@@ -29,6 +29,15 @@ if (empty($_GET["page"])) {
         case "verbs":
             include_once "verbs.php";
             break;
+        case "profile":
+            include_once "profile.php";
+            break;
+        case "practice_test":
+            include_once "practice_test.php";
+            break;
+        case "test":
+            include_once "test.php";
+            break;
         default:
             include_once "notfound.php";
     }

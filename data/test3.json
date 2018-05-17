@@ -1,0 +1,104 @@
+{
+  "questions": {
+    "0": {
+      "question_text": "My dad always %%% tea very much at breakfast.",
+      "answers": {
+        "a": "drinks",
+        "b": "have",
+        "c": "take",
+        "d": "do"
+      },
+      "correct_answer": "a"
+    },
+    "1": {
+      "question_text": "You like %%% music at home.",
+      "answers": {
+        "a": "listening",
+        "b": "listening to",
+        "c": "starting",
+        "d": "make"
+      },
+      "correct_answer": "b"
+    },
+    "2": {
+      "question_text": "Susan can't %%% cigarettes.",
+      "answers": {
+        "a": "smoked",
+        "b": "finished",
+        "c": "know",
+        "d": "smoke"
+      },
+      "correct_answer": "d"
+    },
+    "3": {
+      "question_text": "You %%% come your home yesterday evening.",
+      "answers": {
+        "a": "do not",
+        "b": "will not",
+        "c": "did not",
+        "d": "can not"
+      },
+      "correct_answer": "c"
+    },
+    "4": {
+      "question_text": "It was %%% yesterday. You shut all the windows.",
+      "answers": {
+        "a": "hot",
+        "b": "cold",
+        "c": "foggy",
+        "d": "warm"
+      },
+      "correct_answer": "c"
+    },
+    "5": {
+      "question_text": "Yesterday, Sue %%% a scarf.",
+      "answers": {
+        "a": "starts knitting",
+        "b": "started knit",
+        "c": "start knitting",
+        "d": "started knitting"
+      },
+      "correct_answer": "d"
+    },
+    "6": {
+      "question_text": "Hans %%% a fire now.",
+      "answers": {
+        "a": "was lighting",
+        "b": "is lighting",
+        "c": "light",
+        "d": "lighted"
+      },
+      "correct_answer": "b"
+    },
+    "7": {
+      "question_text": "The weather was %%% and sunny yesterday.",
+      "answers": {
+        "a": "foggy",
+        "b": "cloudy",
+        "c": "hot",
+        "d": "rainy"
+      },
+      "correct_answer": "c"
+    },
+    "8": {
+      "question_text": "%%% your books, please.\n",
+      "answers": {
+        "a": "close",
+        "b": "speak",
+        "c": "do",
+        "d": "sit"
+      },
+      "correct_answer": "a"
+    },
+    "9": {
+      "question_text": "%%% your books in your bags!",
+      "answers": {
+        "a": "stand",
+        "b": "put",
+        "c": "let's",
+        "d": "please"
+      },
+      "correct_answer": "b"
+    }
+  }
+}

@@ -26,13 +26,17 @@ $read_user_sql = "SELECT * FROM user WHERE mail = '$user_mail' AND password = '$
 $result = $mysql_connection->query($read_user_sql);
 
 $row = $result->fetch_array(MYSQLI_ASSOC);
-echo "Hoş geldin " . $row["firstname"] . " anasayfaya yönlendiriliyorsun...";
+if (isset($row))
+    echo "ok";
+else
+    die("User not found");
 
 session_start();
 
 $_SESSION["session_id"] = time();
 $_SESSION["user_firstname"] = $row["firstname"];
-
-//header("Location: index.php");
+$_SESSION["user_lastname"] = $row["lastname"];
+$_SESSION["user_mail"] = $row["mail"];
+$_SESSION["user_id"] = $row["id"];
 
 $mysql_connection->close();
