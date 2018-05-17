@@ -1,7 +1,8 @@
 <?php
-if (empty($_SESSION["session_id"])) {
+session_start();
+if (empty($_SESSION["session_id"])) { // oturum açık değilse öl
     die();
-} else {
+} else { // oturum açıksa şifre değiştirme formunu ve profile bilgilerini göster
     ?>
     <div class="table">
         <div class="alert alert-success alert-dismissible fade show" role="alert" id="positiveFeedback"

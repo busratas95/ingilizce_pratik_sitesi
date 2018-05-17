@@ -6,10 +6,10 @@
  * Time: 01:01
  */
 
-session_start();
+session_start(); // oturumu aç
 
-session_unset();
+session_unset(); // oturumda tutulan tüm verileri sil (olsa da olmasa da)
 
-session_destroy();
+session_destroy(); // oturumu tamamen yok et
 
 echo "ok";

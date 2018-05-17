@@ -6,6 +6,8 @@
  * Time: 21:55
  */
 
+// bu kod anlık GET page parametresine göre hangi sayfanın yüklenmesi gerektiğini ayarlar
+
 $page = $_GET["page"];
 
 if (empty($_GET["page"])) {

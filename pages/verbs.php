@@ -10,11 +10,11 @@
         <tbody>
         <?php
 
-        $file = fopen("./data/verbs.txt", "r");
+        $file = fopen("./data/verbs.txt", "r"); // verbs.txt dosyasını aç
 
         if ($file) {
-            while (($line = fgets($file)) !== false) {
-                $line_arr = explode("\t", $line);
+            while (($line = fgets($file)) !== false) { // açılan dosyayı satır satır oku
+                $line_arr = explode("\t", $line); // okunan her satırı tab larına göre ayır böylece elimizde her fiilin zamana göre çekilmiş hali bir array olarak gelir
                 echo "<tr>
                         <td>$line_arr[0]</td>
                         <td>$line_arr[1]</td>
@@ -23,7 +23,7 @@
                       </tr>";
             }
 
-            fclose($file);
+            fclose($file); // dosyayı kapat
         }
 
         ?>

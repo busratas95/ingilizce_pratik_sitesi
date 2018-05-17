@@ -6,14 +6,15 @@
  * Time: 00:05
  */
 
-session_start();
-if (empty($_SESSION["session_id"]))
+session_start(); // oturum aç
+if (empty($_SESSION["session_id"])) // oturum bilgileri yoksa öl
     die();
 
-$requested_test = $_GET["test_id"];
+$requested_test = $_GET["test_id"]; // GET ile yollanan test_id verisini al
 
 $test_path = "";
 
+// test_id sine göre hangi test okunması gerekiyor onu bul
 switch ($requested_test) {
     case 1:
         $test_path = "./data/test1.json";
@@ -28,35 +29,40 @@ switch ($requested_test) {
         die("Wrong test request!");
 }
 
+// tüm dosyayı oku
 $test_file = file_get_contents($test_path);
-
+// okunan dosyayı JSON decode et yani array e çevir
 $test_array = json_decode($test_file, true);
 
+// mysql bağlantı bilgileri
 $servername = "localhost";
 $username = "ingilizcepratik";
 $password = "12345";
 $database = "ingilizcepratik";
-
+// SESSION içinden user_id yi al
 $user_id = $_SESSION["user_id"];
 
+// mysql e bağlan
 $mysql_connection = new mysqli($servername, $username, $password, $database);
 
 if ($mysql_connection->connect_error)
     die("Connection failed: " . $mysql_connection->connect_error);
 
+// kullanıcının o test_id si için tüm bilgilerini çek
 $sql = "SELECT * FROM test WHERE user_id = '$user_id' AND test_id = '$requested_test'";
 
 $query = $mysql_connection->query($sql);
 $row = $query->fetch_array(MYSQLI_ASSOC);
-if (isset($row)) {
+
+if (isset($row)) { // eğer gelen sonuç varsa son cevapladığı soruyu bul
     $last_question = $row["last_answered_question"];
     $question = $last_question;
-} else
+} else // gelen sonuç yoksa kullanıcı daha o teste başlamamış o yüzden ilk soruyu göster
     $question = 0;
 
-if ($question == 10) {
+if ($question == 10) { // son soruyu geçtiyse kullanıcı test bitmiştir.
     echo "<div class='table'><h3>Bu testi bitirdiniz. Tebrikler!</h3></div>";
-} else {
+} else { // değilse ilgili soruyu göster
 
     ?>
 
@@ -77,7 +83,7 @@ if ($question == 10) {
         </div>
         <form id="testForm">
             <div id="soruparagrafi"><p>
-                    <strong><?= nl2br(str_replace("%%%", "_________________", $test_array["questions"][$question]["question_text"])); ?></strong>
+                    <strong><?= nl2br(str_replace("%%%", "_________________", $test_array["questions"][$question]["question_text"])); // nl2br JSON içindeki \n karakterlerini <br> etiketine çevirir  ?></strong>
                 </p></div>
             <div class="radio">
                 <label><input type="radio" name="answer" id="answer_a"

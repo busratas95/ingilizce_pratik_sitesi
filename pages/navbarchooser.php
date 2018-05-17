@@ -6,6 +6,9 @@
  * Time: 00:29
  */
 
+// bu kod navbarda hangi item ın active olması gerektiğini ayarlıyor
+// çalıştığında ya active yazıyor ya da hiç bir şey yazmıyor
+// böylece ilgili CSS sınıfı o item için yüklenmiş oluyor
 function isActive($navitem)
 {
     $currentPage = $_GET["page"];

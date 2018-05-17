@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<?php include_once "pages/navbarchooser.php"; ?>
+<?php include_once "pages/navbarchooser.php"; // aktif sayfaya göre navbarda ilgili hangi div seçilmesi gerekirse onu seçer ?>
 <html>
 <head>
     <title>INGILIZCE PRATIK SITESI</title>
@@ -120,6 +120,7 @@
     </style>
 
     <script>
+        // sözlük.php ile AJAX üzerinden sayfayı yenilemeden iletişime geçer ve sonuçları gösterir
         $(document).ready(function () {
             $("#search_form").submit(function () {
                 event.preventDefault();
@@ -150,12 +151,14 @@
                 });
             });
         });
+        // sözlük sayfasındaki arama yönünü belirler, türkçeden ingilizceye ya da ingilizceden türkçeye
         $(document).ready(function () {
             $(".dropdown-menu a").click(function () {
                 $("#search_filter").text($(this).text());
             });
 
         });
+        // kayıt ol formunu AJAX ile register.php ye yollar ve gelen cevaba göre sayfayı yeniler veya hata gösterir
         $(document).ready(function () {
             $("#signUpForm").submit(function () {
                 event.preventDefault();
@@ -179,6 +182,7 @@
                 });
             });
         });
+        // login ol formunu AJAX ile login.php ye yollar ve gelen cevaya göre sayfayı yeniler veya hata gösterir
         $(document).ready(function () {
             $("#loginForm").submit(function () {
                 event.preventDefault();
@@ -193,6 +197,7 @@
                 });
             });
         });
+        // çıkış yap butonuna basılınca AJAX üzerinden çalışır logout.php ye veri yolla ve çıkış yapıp sayfayı yeniler
         $(document).ready(function () {
             $("#logoutForm").submit(function () {
                 event.preventDefault();
@@ -206,6 +211,7 @@
                 });
             });
         });
+        // şifre değiştirme formunu AJAX ile change_password.php ye POST eder, gelen cevaba göre başarılı mesajı gösterir ya da hata mesajı gösterir
         $(document).ready(function () {
             $("#changePasswordForm").submit(function () {
                 event.preventDefault();
@@ -226,6 +232,7 @@
                 })
             });
         });
+        // kullanıcı bir soruya cevap girdiğinde çalışır, cevabı check_test_answer.php dosyasına yollar ve gelen cevaba göre bir sonraki soruya geçer ya da hata mesajı gösterir
         $(document).ready(function () {
             $("#testForm").submit(function () {
                 event.preventDefault();
@@ -261,11 +268,13 @@
             </li>
             <li class="nav-item">
                 <?php
-                if (isset($_SESSION['session_id'])) {
+                if (isset($_SESSION['session_id'])) { // eğer kullanıcı loginse ve
                     ?>
-                    <a href="?page=practice_test" class="nav-link <?= isActive("practice_test"); ?>">Pratik Testler</a>
+                    <a href="?page=practice_test"
+                       class="nav-link <?= isActive("practice_test"); // pratik test sayfası aktifse burayı aktif gösterir  ?>">Pratik
+                        Testler</a>
                     <?php
-                } else {
+                } else { // değilse aktif göstermez
                     ?>
                     <div class="nav-link">Pratik Testler</div>
                     <?php
@@ -274,11 +283,12 @@
             </li>
             <li class="nav-item">
                 <?php
-                if (isset($_SESSION['session_id'])) {
+                if (isset($_SESSION['session_id'])) { // eğer kullanıcı loginse ve
                     ?>
-                    <a href="?page=profile" class="nav-link <?= isActive("profile"); ?>">Profil</a>
+                    <a href="?page=profile"
+                       class="nav-link <?= isActive("profile"); // profile sayfası aktifse burayı aktif gösterir  ?>">Profil</a>
                     <?php
-                } else {
+                } else { // değilse aktif göstermez
                     ?>
                     <div class="nav-link">Profil</div>
                     <?php
@@ -294,13 +304,13 @@
 <div>
     <div class="list-group">
         <!-- soldaki list group -->
-        <?php include "menuchooser.php" ?>
+        <?php include "menuchooser.php" // aktif olan sayfaya göre menüyü gösterirken ilgili satırı aktif gösterir ?>
     </div>
 
-    <?php include "pages/pagechooser.php" ?>
+    <?php include "pages/pagechooser.php" // tüm sayfaların dinamik olarak buraya yüklenmesini sağlar, kontrol ettiği şey tarayıcının adres satırında ?page= olarak ne yazdığı, ona göre sayfalar yüklenir ?>
 
     <?php
-    if (empty($_SESSION["session_id"])) {
+    if (empty($_SESSION["session_id"])) { // eğer kullanıcı giriş yapmadıysa alttaki kısmı göster
         ?>
 
         <div class="girisuyelikgenel"> <!-- giris yapma divi -->
@@ -396,7 +406,7 @@
         </div>
 
         <?php
-    } else {
+    } else { // eğer kullanıcı zaten giriş yaptıysa çıkış butonunu göster
         ?>
         <div class="girisuyelikgenel">
             <form id="logoutForm">
@@ -411,6 +421,7 @@
 
 <script>
 
+    // login butonuna ya da kayıt butonuna basıldığında alt kısmında ilgili formu gösterir
     const login_button = document.getElementById("giris");
     const register_button = document.getElementById("uyeol");
 
